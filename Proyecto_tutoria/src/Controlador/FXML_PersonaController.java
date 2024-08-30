@@ -22,60 +22,71 @@ import javafx.stage.Stage;
  *
  * @author e_d_d
  */
-public class FXML_PrincipalController implements Initializable {
+public class FXML_PersonaController implements Initializable {
 
     @FXML
-    private Button btn_usr;
+    private TextField txt_nombre;
+    @FXML
+    private TextField txt_apellido;
+    @FXML
+    private TextField txt_altura;
+    @FXML
+    private Button btn_guardar;
     @FXML
     private Button btn_cerrar;
 
-    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        /*
-        String nombre ="Pepe";
-        Persona per = new Persona(nombre,"Salinas",8);
-        System.out.println(per.getNombre());
-        System.out.println("Pepe no se quiere llamar pepe, se cambia el nombre");
-        per.setNombre("Patricio");
-        System.out.println("ahora se llama:" + per.getNombre());*/
-        
     }    
 
     @FXML
-    private void acc_nuevoUsuario(ActionEvent event) {
+    private void acc_guardar(ActionEvent event) {
+         String nombre = this.txt_nombre.getText();
+        String apellido = this.txt_apellido.getText();
+        int altura = Integer.parseInt(this.txt_altura.getText());
+        
+        Persona per = new Persona(nombre,apellido,altura);
+        
+        System.out.println(per.getNombre());
+        System.out.println(per.getApellido());
+        System.out.println(per.getAltura());
+    }
+    
+    public void fun_imprimir(){
+        System.out.println("qqqqqqqqqqqqqqqqqqqqqq");
+    }
+    
+    
+     public void cerrarFormulario() {
         try {
-            String path = "/Vistas/FXML_Persona.fxml";
-               FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
-                Parent root = loader.load();
-                FXML_PersonaController controlador = loader.getController();
-                
+            String formulario = "/Vistas/FXML_Principal.fxml";
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(formulario));
+            Parent root = loader.load();
+          
+
             Scene scene = new Scene(root);
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.setResizable(false);
-            
-            controlador.fun_imprimir();
-           // controlador.Focus_Inicial();
 
             stage.show();
-            stage.setOnCloseRequest(eh->controlador.cerrarFormulario());
-            Stage myStage = (Stage)this.btn_cerrar.getScene().getWindow();
-                    
+
+           
+            Stage myStage = (Stage) this.btn_cerrar.getScene().getWindow();
+
             myStage.close();
-               
+
         } catch (Exception e) {
         }
+        //    
     }
 
     @FXML
     private void acc_cerrar(ActionEvent event) {
+        cerrarFormulario();
     }
-
-   
-    
 }
