@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="Controlador.FXML_PrincipalController">
+   <children>
+      <Button fx:id="btn_camp" layoutX="72.0" layoutY="91.0" mnemonicParsing="false" onAction="#acc_camp" text="Campaña" />
+      <Button fx:id="btn_donante" layoutX="264.0" layoutY="91.0" mnemonicParsing="false" onAction="#acc_donante" text="Donante" />
+      <Button fx:id="btn_empleado" layoutX="79.0" layoutY="175.0" mnemonicParsing="false" onAction="#acc_empleado" text="Empleado" />
+      <Button fx:id="btn_lista" layoutX="264.0" layoutY="188.0" mnemonicParsing="false" onAction="#acc_lista" text="Lista de donantes" />
+      <Button fx:id="btn_cerrar" layoutX="423.0" layoutY="304.0" mnemonicParsing="false" onAction="#acc_cerrar" text="Cerrar" />
+   </children>
+</AnchorPane>
