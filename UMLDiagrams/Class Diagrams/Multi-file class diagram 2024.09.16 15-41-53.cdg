@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="Camp" package="Modelos" visibility="public" xPosition="77.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="lista_emp" type="ArrayList&lt;Empleados&gt;" visibility="private"/>
+        <Field name="lista_donante" type="ArrayList&lt;Donantes&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getLista_emp" returnType="ArrayList&lt;Empleados&gt;" visibility="public"/>
+        <Method name="setLista_emp" returnType="void" visibility="public">
+          <Argument type="Empleados" name="lista_emp"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getLista_donante" returnType="ArrayList&lt;Donantes&gt;" visibility="public"/>
+        <Method name="setLista_donante" returnType="void" visibility="public">
+          <Argument type="Donantes" name="lista_donante"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Donantes" package="Modelos" visibility="public" xPosition="12.0" yPosition="475.0">
+      <Fields>
+        <Field name="cedula" type="String" visibility="private"/>
+        <Field name="fecha_registro" type="LocalDate" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="cedula"/>
+          <Argument type="LocalDate" name="fecha_registro"/>
+          <Argument type="LocalDate" name="fecha_tatuaje"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCedula" returnType="String" visibility="public"/>
+        <Method name="setCedula" returnType="void" visibility="public">
+          <Argument type="String" name="cedula"/>
+        </Method>
+        <Method name="getFecha_registro" returnType="LocalDate" visibility="public"/>
+        <Method name="setFecha_registro" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="fecha_registro"/>
+        </Method>
+        <Method name="getFecha_tatuaje" returnType="LocalDate" visibility="public"/>
+        <Method name="setFecha_tatuaje" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="fecha_tatuaje"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Empleados" package="Modelos" visibility="public" xPosition="907.0" yPosition="202.0">
+      <Fields>
+        <Field name="usuario" type="String" visibility="private"/>
+        <Field name="clave" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="usuario"/>
+          <Argument type="String" name="clave"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUsuario" returnType="String" visibility="public"/>
+        <Method name="setUsuario" returnType="void" visibility="public">
+          <Argument type="String" name="usuario"/>
+        </Method>
+        <Method name="getClave" returnType="String" visibility="public"/>
+        <Method name="setClave" returnType="void" visibility="public">
+          <Argument type="String" name="clave"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ModGeneral" package="Modelos" visibility="public" xPosition="930.0" yPosition="20.0">
+      <Fields>
+        <Field name="Lista_camp" type="ArrayList&lt;Camp&gt;" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="lista_donante" source="Modelos.Camp" target="Modelos.Donantes" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Donantes&gt;"/>
+    <HasRelation name="lista_emp" source="Modelos.Camp" target="Modelos.Empleados" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Empleados&gt;"/>
+    <UseRelation source="Modelos.Camp" target="Modelos.Empleados" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Lista_camp" source="Modelos.ModGeneral" target="Modelos.Camp" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Camp&gt;"/>
+    <UseRelation source="Modelos.Camp" target="Modelos.Donantes" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

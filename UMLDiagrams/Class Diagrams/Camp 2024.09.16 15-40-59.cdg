@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Camp">
+  <ClassDiagramComponents>
+    <Class name="Camp" package="Modelos" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="lista_emp" type="ArrayList&lt;Empleados&gt;" visibility="private"/>
+        <Field name="lista_donante" type="ArrayList&lt;Donantes&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getLista_emp" returnType="ArrayList&lt;Empleados&gt;" visibility="public"/>
+        <Method name="setLista_emp" returnType="void" visibility="public">
+          <Argument type="Empleados" name="lista_emp"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getLista_donante" returnType="ArrayList&lt;Donantes&gt;" visibility="public"/>
+        <Method name="setLista_donante" returnType="void" visibility="public">
+          <Argument type="Donantes" name="lista_donante"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

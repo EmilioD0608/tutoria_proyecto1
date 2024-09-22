@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Donacion_tuto">
+  <ClassDiagramComponents>
+    <Class name="FXML_CampController" package="Controlador" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="txt_camp" type="TextField" visibility="private"/>
+        <Field name="btn_guardar" type="Button" visibility="private"/>
+        <Field name="btn_cerrar" type="Button" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="acc_guardar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_cerrar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="cerrarFormulario" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FXML_DonanteController" package="Controlador" visibility="public" xPosition="328.0" yPosition="51.0">
+      <Fields>
+        <Field name="btn_guardar" type="Button" visibility="private"/>
+        <Field name="btn_cerrar" type="Button" visibility="private"/>
+        <Field name="cbx_camp" type="ComboBox&lt;Camp&gt;" visibility="private"/>
+        <Field name="dtp_registro" type="DatePicker" visibility="private"/>
+        <Field name="chx_tatuaje" type="CheckBox" visibility="private"/>
+        <Field name="dtp_tatuaje" type="DatePicker" visibility="private"/>
+        <Field name="txt_cedula" type="TextField" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="cerrarFormulario" returnType="void" visibility="public"/>
+        <Method name="acc_guardar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_cerrar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_tautaje" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="fun_actualizar" returnType="void" visibility="public"/>
+        <Method name="fun_guardar" returnType="void" visibility="public"/>
+        <Method name="verf_check" returnType="void" visibility="public"/>
+        <Method name="fun_buscarDonante" returnType="Donantes" visibility="public"/>
+        <Method name="fun_validarRegistro" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FXML_EmpleadosController" package="Controlador" visibility="public" xPosition="675.0" yPosition="180.0">
+      <Fields>
+        <Field name="btn_guardar" type="Button" visibility="private"/>
+        <Field name="btn_cerrar" type="Button" visibility="private"/>
+        <Field name="txt_usuario" type="TextField" visibility="private"/>
+        <Field name="txt_contra" type="TextField" visibility="private"/>
+        <Field name="cbx_camp" type="ComboBox&lt;Camp&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="cerrarFormulario" returnType="void" visibility="public"/>
+        <Method name="acc_guardar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_cerrar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FXML_loginController" package="Controlador" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="btn_guardar" type="Button" visibility="private"/>
+        <Field name="btn_cerrar" type="Button" visibility="private"/>
+        <Field name="txt_usr" type="TextField" visibility="private"/>
+        <Field name="txt_contra" type="TextField" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="acc_guardar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_cerrar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="cerrarFormulario" returnType="void" visibility="public"/>
+        <Method name="fun_login" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FXML_PrincipalController" package="Controlador" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="btn_camp" type="Button" visibility="private"/>
+        <Field name="btn_cerrar" type="Button" visibility="private"/>
+        <Field name="btn_donante" type="Button" visibility="private"/>
+        <Field name="btn_empleado" type="Button" visibility="private"/>
+        <Field name="btn_lista" type="Button" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="acc_camp" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_cerrar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_donante" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_empleado" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_lista" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Main" package="Controlador" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Camp" package="Modelos" visibility="public" xPosition="955.0" yPosition="618.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="lista_emp" type="ArrayList&lt;Empleados&gt;" visibility="private"/>
+        <Field name="lista_donante" type="ArrayList&lt;Donantes&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getLista_emp" returnType="ArrayList&lt;Empleados&gt;" visibility="public"/>
+        <Method name="setLista_emp" returnType="void" visibility="public">
+          <Argument type="Empleados" name="lista_emp"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getLista_donante" returnType="ArrayList&lt;Donantes&gt;" visibility="public"/>
+        <Method name="setLista_donante" returnType="void" visibility="public">
+          <Argument type="Donantes" name="lista_donante"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Donantes" package="Modelos" visibility="public" xPosition="1434.0" yPosition="434.0">
+      <Fields>
+        <Field name="cedula" type="String" visibility="private"/>
+        <Field name="fecha_registro" type="LocalDate" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="cedula"/>
+          <Argument type="LocalDate" name="fecha_registro"/>
+          <Argument type="LocalDate" name="fecha_tatuaje"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCedula" returnType="String" visibility="public"/>
+        <Method name="setCedula" returnType="void" visibility="public">
+          <Argument type="String" name="cedula"/>
+        </Method>
+        <Method name="getFecha_registro" returnType="LocalDate" visibility="public"/>
+        <Method name="setFecha_registro" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="fecha_registro"/>
+        </Method>
+        <Method name="getFecha_tatuaje" returnType="LocalDate" visibility="public"/>
+        <Method name="setFecha_tatuaje" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="fecha_tatuaje"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Empleados" package="Modelos" visibility="public" xPosition="390.0" yPosition="675.0">
+      <Fields>
+        <Field name="usuario" type="String" visibility="private"/>
+        <Field name="clave" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="usuario"/>
+          <Argument type="String" name="clave"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUsuario" returnType="String" visibility="public"/>
+        <Method name="setUsuario" returnType="void" visibility="public">
+          <Argument type="String" name="usuario"/>
+        </Method>
+        <Method name="getClave" returnType="String" visibility="public"/>
+        <Method name="setClave" returnType="void" visibility="public">
+          <Argument type="String" name="clave"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ModGeneral" package="Modelos" visibility="public" xPosition="141.0" yPosition="498.0">
+      <Fields>
+        <Field name="Lista_camp" type="ArrayList&lt;Camp&gt;" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="cbx_camp" source="Controlador.FXML_EmpleadosController" target="Modelos.Camp" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Modelos.Camp" target="Modelos.Empleados" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="lista_emp" source="Modelos.Camp" target="Modelos.Empleados" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Empleados&gt;"/>
+    <HasRelation name="Lista_camp" source="Modelos.ModGeneral" target="Modelos.Camp" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Camp&gt;"/>
+    <HasRelation name="cbx_camp" source="Controlador.FXML_DonanteController" target="Modelos.Camp" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="lista_donante" source="Modelos.Camp" target="Modelos.Donantes" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Donantes&gt;"/>
+    <UseRelation source="Modelos.Camp" target="Modelos.Donantes" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Controlador.FXML_DonanteController" target="Modelos.Donantes" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

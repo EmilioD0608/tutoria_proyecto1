@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Donacion de Sangre">
+  <ClassDiagramComponents>
+    <Class name="FXML_configSangreController" package="Controlador" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="btn_guardar" type="Button" visibility="private"/>
+        <Field name="btn_cerrar" type="Button" visibility="private"/>
+        <Field name="btn_registrarSangre" type="Button" visibility="private"/>
+        <Field name="btn_editarSangre" type="Button" visibility="private"/>
+        <Field name="btn_listado" type="Button" visibility="private"/>
+        <Field name="apn_Registro" type="AnchorPane" visibility="private"/>
+        <Field name="apn_listado" type="AnchorPane" visibility="private"/>
+        <Field name="apn_editor" type="AnchorPane" visibility="private"/>
+        <Field name="txt_registro_tiposangre" type="TextField" visibility="private"/>
+        <Field name="cb_Registro_Estado" type="CheckBox" visibility="private"/>
+        <Field name="tv_listado" type="TableView&lt;sangre&gt;" visibility="private"/>
+        <Field name="txt_editar_nombre" type="TextField" visibility="private"/>
+        <Field name="cb_Editar_Estado" type="CheckBox" visibility="private"/>
+        <Field name="cbx_Editar_tipo" type="ChoiceBox&lt;sangre&gt;" visibility="private"/>
+        <Field name="col_nombre" type="TableColumn&lt;?, ?&gt;" visibility="private"/>
+        <Field name="col_estado" type="TableColumn&lt;?, ?&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="acc_guardar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_cerrar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_registrarSangre" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_editarSangre" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_listado" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="okp_Estado" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="acc_Estado" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="cerrarFormulario" returnType="void" visibility="public"/>
+        <Method name="fun_MostrarDetalleContacto" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;sangre&gt;" name="detallesangre"/>
+        </Method>
+        <Method name="acc_Editar_Tipo" returnType="void" visibility="private">
+          <Argument type="MouseEvent" name="event"/>
+        </Method>
+        <Method name="fun_cargarChoiceBox" returnType="void" visibility="public"/>
+        <Method name="fun_validarRegistro" returnType="boolean" visibility="public"/>
+        <Method name="fun_validarEditor" returnType="boolean" visibility="public"/>
+        <Method name="limpiar" returnType="void" visibility="public"/>
+        <Method name="fun_registrar" returnType="void" visibility="public"/>
+        <Method name="fun_editar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FXML_ListadoDonantesController" package="Controlador" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="btn_cerrar" type="Button" visibility="private"/>
+        <Field name="cb_camp" type="ComboBox&lt;Camp&gt;" visibility="private"/>
+        <Field name="tv_donantes" type="TableView&lt;Donante&gt;" visibility="private"/>
+        <Field name="col_cedula" type="TableColumn&lt;?, ?&gt;" visibility="private"/>
+        <Field name="col_apellido" type="TableColumn&lt;?, ?&gt;" visibility="private"/>
+        <Field name="col_nombre" type="TableColumn&lt;?, ?&gt;" visibility="private"/>
+        <Field name="col_tipo" type="TableColumn&lt;?, ?&gt;" visibility="private"/>
+        <Field name="col_tatuaje" type="TableColumn&lt;?, ?&gt;" visibility="private"/>
+        <Field name="col_registro" type="TableColumn&lt;?, ?&gt;" visibility="private"/>
+        <Field name="col_nacimiento" type="TableColumn&lt;?, ?&gt;" visibility="private"/>
+        <Field name="col_correo" type="TableColumn&lt;?, ?&gt;" visibility="private"/>
+        <Field name="col_telefono" type="TableColumn&lt;?, ?&gt;" visibility="private"/>
+        <Field name="col_direccion" type="TableColumn&lt;?, ?&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="cerrarFormulario" returnType="void" visibility="public"/>
+        <Method name="acc_cerrar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_camp" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="fun_MostrarDetalleContacto" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Donante&gt;" name="detalledonante"/>
+        </Method>
+        <Method name="fun_cargarCombo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FXML_PrincipalController" package="Controlador" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="btn_Registro_Campaña" type="Button" visibility="private"/>
+        <Field name="btn_Registro_Donante" type="Button" visibility="private"/>
+        <Field name="btn_Registro_Usuario" type="Button" visibility="private"/>
+        <Field name="btn_Lista_Donantes" type="Button" visibility="private"/>
+        <Field name="btn_cerrar" type="Button" visibility="private"/>
+        <Field name="btn_registrosangre" type="Button" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="acc_Registro_Campaña" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_Registro_Donante" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_Registro_Usuario" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_Lista_Donantes" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_cerrar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_registrosangre" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FXML_RegistroCampController" package="Controlador" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="btn_cerrar" type="Button" visibility="private"/>
+        <Field name="btn_guardar" type="Button" visibility="private"/>
+        <Field name="txt_Nombre" type="TextField" visibility="private"/>
+        <Field name="txt_Lugar" type="TextField" visibility="private"/>
+        <Field name="cb_Estado" type="CheckBox" visibility="private"/>
+        <Field name="dp_Fecha" type="DatePicker" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="cerrarFormulario" returnType="void" visibility="public"/>
+        <Method name="acc_cerrar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_guardar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="fun_validarNombre" returnType="boolean" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="fun_limpiar" returnType="void" visibility="public"/>
+        <Method name="fun_validar" returnType="boolean" visibility="public"/>
+        <Method name="get_Fecha" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_Estado" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="Seleccionar_Estado" returnType="void" visibility="public"/>
+        <Method name="okp_Nombre" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="okp_Lugar" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="okp_Fecha" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="okp_Estado" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FXML_RegistroDonanteController" package="Controlador" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="btn_cerrar" type="Button" visibility="private"/>
+        <Field name="btn_guardar" type="Button" visibility="private"/>
+        <Field name="txt_Nombre" type="TextField" visibility="private"/>
+        <Field name="txt_Cedula" type="TextField" visibility="private"/>
+        <Field name="txt_Apellido" type="TextField" visibility="private"/>
+        <Field name="dp_nacimiento" type="DatePicker" visibility="private"/>
+        <Field name="txt_Correo" type="TextField" visibility="private"/>
+        <Field name="txt_Numero" type="TextField" visibility="private"/>
+        <Field name="txt_Direccion" type="TextField" visibility="private"/>
+        <Field name="lbl_camp" type="Label" visibility="private"/>
+        <Field name="dp_registro" type="DatePicker" visibility="private"/>
+        <Field name="cb_tatuaje" type="CheckBox" visibility="private"/>
+        <Field name="cbx_TPsangre" type="ChoiceBox&lt;sangre&gt;" visibility="private"/>
+        <Field name="dp_tatuaje" type="DatePicker" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="cerrarFormulario" returnType="void" visibility="public"/>
+        <Method name="acc_cerrar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_guardar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="fun_registrarDonantenew" returnType="void" visibility="public"/>
+        <Method name="fun_actualizarDonante" returnType="void" visibility="public"/>
+        <Method name="fun_buscar_donante" returnType="Donante" visibility="public"/>
+        <Method name="fun_validarRegistro" returnType="boolean" visibility="public"/>
+        <Method name="fun_cargarChoiceBox" returnType="void" visibility="public"/>
+        <Method name="fun_validar" returnType="boolean" visibility="public"/>
+        <Method name="fun_existe_cedula" returnType="boolean" visibility="public">
+          <Argument type="String" name="cedula"/>
+        </Method>
+        <Method name="fun_val_cedula" returnType="boolean" visibility="public">
+          <Argument type="String" name="cedula"/>
+        </Method>
+        <Method name="okp_Nombre" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="okp_Cedula" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="okp_Apellido" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="okp_Nacimiento" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="okp_Correo" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="okp_Numero" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="okp_Direccion" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="okp_Registro" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="okp_tatuaje" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="acc_tatuaje" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="fun_limpiar" returnType="void" visibility="public"/>
+        <Method name="fun_rellenarCampos" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FXML_RegistroUserController" package="Controlador" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="btn_cerrar" type="Button" visibility="private"/>
+        <Field name="btn_guardar" type="Button" visibility="private"/>
+        <Field name="txt_Nombre" type="TextField" visibility="private"/>
+        <Field name="txt_Cedula" type="TextField" visibility="private"/>
+        <Field name="txt_User" type="TextField" visibility="private"/>
+        <Field name="txt_Apellido" type="TextField" visibility="private"/>
+        <Field name="dp_nacimiento" type="DatePicker" visibility="private"/>
+        <Field name="txt_Correo" type="TextField" visibility="private"/>
+        <Field name="txt_Clave" type="TextField" visibility="private"/>
+        <Field name="txt_Numero" type="TextField" visibility="private"/>
+        <Field name="txt_Direccion" type="TextField" visibility="private"/>
+        <Field name="cbo_Camp" type="ComboBox&lt;Camp&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="cerrarFormulario" returnType="void" visibility="public"/>
+        <Method name="acc_cerrar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_guardar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="fun_cargarComboCamp" returnType="void" visibility="public"/>
+        <Method name="acc_Camp" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="fun_limpiar" returnType="void" visibility="public"/>
+        <Method name="fun_validar" returnType="boolean" visibility="public"/>
+        <Method name="fun_existe_user" returnType="boolean" visibility="public">
+          <Argument type="String" name="usuario"/>
+        </Method>
+        <Method name="fun_existe_cedula" returnType="boolean" visibility="public">
+          <Argument type="String" name="cedula"/>
+        </Method>
+        <Method name="fun_val_cedula" returnType="boolean" visibility="public">
+          <Argument type="String" name="cedula"/>
+        </Method>
+        <Method name="okp_Nombre" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="okp_Cedula" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="okp_User" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="okp_Apellido" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="okp_Nacimiento" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="okp_Correo" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="okp_Clave" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="okp_Numero" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="okp_Direccion" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FXML_VerificadorAdminController" package="Controlador" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="clas" type="String" visibility="private"/>
+        <Field name="txt_user" type="TextField" visibility="private"/>
+        <Field name="pwf_clave" type="PasswordField" visibility="private"/>
+        <Field name="btn_acceder" type="Button" visibility="private"/>
+        <Field name="btn_cerrar" type="Button" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="cerrarFormulario" returnType="void" visibility="public"/>
+        <Method name="okp_user" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="okp_clave" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="acc_acceder" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_cerrar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="buscar_usuario" returnType="boolean" visibility="public">
+          <Argument type="String" name="user"/>
+          <Argument type="String" name="clave"/>
+        </Method>
+        <Method name="fun_validar" returnType="boolean" visibility="public"/>
+        <Method name="fun_decidirDireccion" returnType="void" visibility="public">
+          <Argument type="int" name="num"/>
+        </Method>
+        <Method name="fun_no_acceso" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FXML_VerificadorController" package="Controlador" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="btn_cerrar" type="Button" visibility="private"/>
+        <Field name="btn_acceder" type="Button" visibility="private"/>
+        <Field name="txt_user" type="TextField" visibility="private"/>
+        <Field name="pwf_clave" type="PasswordField" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="cerrarFormulario" returnType="void" visibility="public"/>
+        <Method name="acc_cerrar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acc_acceder" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="buscar_usuario" returnType="boolean" visibility="public">
+          <Argument type="String" name="user"/>
+          <Argument type="String" name="clave"/>
+        </Method>
+        <Method name="fun_validar" returnType="boolean" visibility="public"/>
+        <Method name="fun_no_acceso" returnType="void" visibility="public"/>
+        <Method name="okp_user" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+        <Method name="okp_clave" returnType="void" visibility="private">
+          <Argument type="KeyEvent" name="event"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Main" package="Controlador" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="fun_crearTPsangre" returnType="void" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="Camp" package="Modelos" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="NOMBRE" type="String" visibility="private"/>
+        <Field name="LUGAR" type="String" visibility="private"/>
+        <Field name="FECHA" type="LocalDate" visibility="private"/>
+        <Field name="ESTADO" type="String" visibility="private"/>
+        <Field name="UserList" type="ArrayList&lt;Usuario&gt;" visibility="private"/>
+        <Field name="donList" type="ArrayList&lt;Donante&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="NOMBRE"/>
+          <Argument type="String" name="LUGAR"/>
+          <Argument type="LocalDate" name="FECHA"/>
+          <Argument type="String" name="ESTADO"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNOMBRE" returnType="String" visibility="public"/>
+        <Method name="setNOMBRE" returnType="void" visibility="public">
+          <Argument type="String" name="NOMBRE"/>
+        </Method>
+        <Method name="getLUGAR" returnType="String" visibility="public"/>
+        <Method name="setLUGAR" returnType="void" visibility="public">
+          <Argument type="String" name="LUGAR"/>
+        </Method>
+        <Method name="getFECHA" returnType="LocalDate" visibility="public"/>
+        <Method name="setFECHA" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="FECHA"/>
+        </Method>
+        <Method name="getUserList" returnType="ArrayList&lt;Usuario&gt;" visibility="public"/>
+        <Method name="setUserList" returnType="void" visibility="public">
+          <Argument type="Usuario" name="User"/>
+        </Method>
+        <Method name="getDonList" returnType="ArrayList&lt;Donante&gt;" visibility="public"/>
+        <Method name="setDonList" returnType="void" visibility="public">
+          <Argument type="Donante" name="don"/>
+        </Method>
+        <Method name="getESTADO" returnType="String" visibility="public"/>
+        <Method name="setESTADO" returnType="void" visibility="public">
+          <Argument type="String" name="ESTADO"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Donante" package="Modelos" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="tp_sangre" type="String" visibility="private"/>
+        <Field name="tatuaje" type="String" visibility="private"/>
+        <Field name="fecha_registro" type="LocalDate" visibility="private"/>
+        <Field name="fecha_tatuaje" type="LocalDate" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="tp_sangre"/>
+          <Argument type="String" name="tatuaje"/>
+          <Argument type="LocalDate" name="fecha_registro"/>
+          <Argument type="LocalDate" name="fecha_tatuaje"/>
+          <Argument type="String" name="cedula"/>
+          <Argument type="String" name="apellidos"/>
+          <Argument type="String" name="nombres"/>
+          <Argument type="LocalDate" name="nacimiento"/>
+          <Argument type="String" name="direccion"/>
+          <Argument type="String" name="telefono"/>
+          <Argument type="String" name="correo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTp_sangre" returnType="String" visibility="public"/>
+        <Method name="setTp_sangre" returnType="void" visibility="public">
+          <Argument type="String" name="tp_sangre"/>
+        </Method>
+        <Method name="getTatuaje" returnType="String" visibility="public"/>
+        <Method name="setTatuaje" returnType="void" visibility="public">
+          <Argument type="String" name="tatuaje"/>
+        </Method>
+        <Method name="getFecha_registro" returnType="LocalDate" visibility="public"/>
+        <Method name="setFecha_registro" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="fecha_registro"/>
+        </Method>
+        <Method name="getCedula" returnType="String" visibility="public"/>
+        <Method name="setCedula" returnType="void" visibility="public">
+          <Argument type="String" name="cedula"/>
+        </Method>
+        <Method name="getApellidos" returnType="String" visibility="public"/>
+        <Method name="setApellidos" returnType="void" visibility="public">
+          <Argument type="String" name="apellidos"/>
+        </Method>
+        <Method name="getNombres" returnType="String" visibility="public"/>
+        <Method name="setNombres" returnType="void" visibility="public">
+          <Argument type="String" name="nombres"/>
+        </Method>
+        <Method name="getNacimiento" returnType="LocalDate" visibility="public"/>
+        <Method name="setNacimiento" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="nacimiento"/>
+        </Method>
+        <Method name="getDireccion" returnType="String" visibility="public"/>
+        <Method name="setDireccion" returnType="void" visibility="public">
+          <Argument type="String" name="direccion"/>
+        </Method>
+        <Method name="getTelefono" returnType="String" visibility="public"/>
+        <Method name="setTelefono" returnType="void" visibility="public">
+          <Argument type="String" name="telefono"/>
+        </Method>
+        <Method name="getCorreo" returnType="String" visibility="public"/>
+        <Method name="setCorreo" returnType="void" visibility="public">
+          <Argument type="String" name="correo"/>
+        </Method>
+        <Method name="getFecha_tatuaje" returnType="LocalDate" visibility="public"/>
+        <Method name="setFecha_tatuaje" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="fecha_tatuaje"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Mod_General" package="Modelos" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields>
+        <Field name="listaCamp" type="ArrayList&lt;Camp&gt;" visibility="public" isStatic="true"/>
+        <Field name="listaSangre" type="ArrayList&lt;sangre&gt;" visibility="public" isStatic="true"/>
+        <Field name="campActual" type="Camp" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="fun_mensajeInformacion" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="mensaje"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="Modelos" visibility="public" isAbstract="true" xPosition="1220.0" yPosition="420.0">
+      <Fields>
+        <Field name="cedula" type="String" visibility="protected"/>
+        <Field name="apellidos" type="String" visibility="protected"/>
+        <Field name="nombres" type="String" visibility="protected"/>
+        <Field name="nacimiento" type="LocalDate" visibility="protected"/>
+        <Field name="direccion" type="String" visibility="protected"/>
+        <Field name="telefono" type="String" visibility="protected"/>
+        <Field name="correo" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="cedula"/>
+          <Argument type="String" name="apellidos"/>
+          <Argument type="String" name="nombres"/>
+          <Argument type="LocalDate" name="nacimiento"/>
+          <Argument type="String" name="direccion"/>
+          <Argument type="String" name="telefono"/>
+          <Argument type="String" name="correo"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="sangre" package="Modelos" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Fields>
+        <Field name="tipo" type="String" visibility="protected"/>
+        <Field name="estado" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="tipo"/>
+          <Argument type="String" name="estado"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTipo" returnType="String" visibility="public"/>
+        <Method name="setTipo" returnType="void" visibility="public">
+          <Argument type="String" name="tipo"/>
+        </Method>
+        <Method name="getEstado" returnType="String" visibility="public"/>
+        <Method name="setEstado" returnType="void" visibility="public">
+          <Argument type="String" name="estado"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Usuario" package="Modelos" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields>
+        <Field name="usuario" type="String" visibility="private"/>
+        <Field name="clave" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="usuario"/>
+          <Argument type="String" name="clave"/>
+          <Argument type="String" name="cedula"/>
+          <Argument type="String" name="apellidos"/>
+          <Argument type="String" name="nombres"/>
+          <Argument type="LocalDate" name="nacimiento"/>
+          <Argument type="String" name="direccion"/>
+          <Argument type="String" name="telefono"/>
+          <Argument type="String" name="correo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUsuario" returnType="String" visibility="public"/>
+        <Method name="setUsuario" returnType="void" visibility="public">
+          <Argument type="String" name="usuario"/>
+        </Method>
+        <Method name="getClave" returnType="String" visibility="public"/>
+        <Method name="setClave" returnType="void" visibility="public">
+          <Argument type="String" name="clave"/>
+        </Method>
+        <Method name="getCedula" returnType="String" visibility="public"/>
+        <Method name="setCedula" returnType="void" visibility="public">
+          <Argument type="String" name="cedula"/>
+        </Method>
+        <Method name="getApellidos" returnType="String" visibility="public"/>
+        <Method name="setApellidos" returnType="void" visibility="public">
+          <Argument type="String" name="apellidos"/>
+        </Method>
+        <Method name="getNombres" returnType="String" visibility="public"/>
+        <Method name="setNombres" returnType="void" visibility="public">
+          <Argument type="String" name="nombres"/>
+        </Method>
+        <Method name="getNacimiento" returnType="LocalDate" visibility="public"/>
+        <Method name="setNacimiento" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="nacimiento"/>
+        </Method>
+        <Method name="getDireccion" returnType="String" visibility="public"/>
+        <Method name="setDireccion" returnType="void" visibility="public">
+          <Argument type="String" name="direccion"/>
+        </Method>
+        <Method name="getTelefono" returnType="String" visibility="public"/>
+        <Method name="setTelefono" returnType="void" visibility="public">
+          <Argument type="String" name="telefono"/>
+        </Method>
+        <Method name="getCorreo" returnType="String" visibility="public"/>
+        <Method name="setCorreo" returnType="void" visibility="public">
+          <Argument type="String" name="correo"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="cbo_Camp" source="Controlador.FXML_RegistroUserController" target="Modelos.Camp" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Modelos.Usuario" target="Modelos.Persona"/>
+    <HasRelation name="listaCamp" source="Modelos.Mod_General" target="Modelos.Camp" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Camp&gt;"/>
+    <UseRelation source="Modelos.Camp" target="Modelos.Donante" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="campActual" source="Modelos.Mod_General" target="Modelos.Camp" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cbx_TPsangre" source="Controlador.FXML_RegistroDonanteController" target="Modelos.sangre" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Controlador.FXML_ListadoDonantesController" target="Modelos.Donante" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Controlador.FXML_RegistroDonanteController" target="Modelos.Donante" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cb_camp" source="Controlador.FXML_ListadoDonantesController" target="Modelos.Camp" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listaSangre" source="Modelos.Mod_General" target="Modelos.sangre" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;sangre&gt;"/>
+    <UseRelation source="Modelos.Camp" target="Modelos.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="UserList" source="Modelos.Camp" target="Modelos.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Usuario&gt;"/>
+    <IsRelation name="is" source="Modelos.Donante" target="Modelos.Persona"/>
+    <HasRelation name="donList" source="Modelos.Camp" target="Modelos.Donante" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Donante&gt;"/>
+    <HasRelation name="tv_listado" source="Controlador.FXML_configSangreController" target="Modelos.sangre" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cbx_Editar_tipo" source="Controlador.FXML_configSangreController" target="Modelos.sangre" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Controlador.FXML_configSangreController" target="Modelos.sangre" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tv_donantes" source="Controlador.FXML_ListadoDonantesController" target="Modelos.Donante" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
