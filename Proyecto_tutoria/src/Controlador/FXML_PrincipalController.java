@@ -28,6 +28,8 @@ public class FXML_PrincipalController implements Initializable {
     private Button btn_usr;
     @FXML
     private Button btn_cerrar;
+    @FXML
+    private Button btn_NuevoDeporte;
 
     
     /**
@@ -74,6 +76,28 @@ public class FXML_PrincipalController implements Initializable {
 
     @FXML
     private void acc_cerrar(ActionEvent event) {
+    }
+
+    @FXML
+    private void acc_NuevoDeporte(ActionEvent event) {
+        try {
+            String path = "/Vistas/FXML_Deporte.fxml";
+               FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
+                Parent root = loader.load();
+                
+                FXML_DeporteController controlador = loader.getController();
+                Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setResizable(false);
+             stage.show();
+             
+              stage.setOnCloseRequest(eh->controlador.cerrarFormulario());
+               Stage myStage = (Stage)this.btn_cerrar.getScene().getWindow();
+                myStage.close();
+                
+        } catch (Exception e) {
+        }
     }
 
    

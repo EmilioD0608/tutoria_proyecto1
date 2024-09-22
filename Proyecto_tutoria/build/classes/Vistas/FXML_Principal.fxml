@@ -16,9 +16,12 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button contentDisplay="TOP" layoutX="274.0" layoutY="175.0" mnemonicParsing="false" text="Button">
+      <Button fx:id="btn_NuevoDeporte" contentDisplay="TOP" layoutX="274.0" layoutY="175.0" mnemonicParsing="false" onAction="#acc_NuevoDeporte" text="Nuevo Deporte">
          <graphic>
-            <ImageView fitHeight="41.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="41.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/sangre2.png" />
+               </image></ImageView>
          </graphic>
       </Button>
       <Button contentDisplay="TOP" layoutX="414.0" layoutY="175.0" mnemonicParsing="false" text="Button">

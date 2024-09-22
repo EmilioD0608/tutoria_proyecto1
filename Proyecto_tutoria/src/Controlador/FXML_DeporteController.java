@@ -4,6 +4,7 @@
  */
 package Controlador;
 
+import Modelos.Deporte;
 import Modelos.Persona;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -22,18 +24,16 @@ import javafx.stage.Stage;
  *
  * @author e_d_d
  */
-public class FXML_PersonaController implements Initializable {
+public class FXML_DeporteController implements Initializable {
 
     @FXML
-    private TextField txt_nombre;
+    private Button btn_cerrar;
     @FXML
-    private TextField txt_apellido;
-    @FXML
-    private TextField txt_altura;
+    private TextField txt_deporte;
     @FXML
     private Button btn_guardar;
     @FXML
-    private Button btn_cerrar;
+    private ComboBox<Persona> cbx_personas;
 
     /**
      * Initializes the controller class.
@@ -41,28 +41,16 @@ public class FXML_PersonaController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        try {
+            rellenar_combobox();
+        } catch (Exception e) {
+        }
     }    
-
-    @FXML
-    private void acc_guardar(ActionEvent event) {
-         String nombre = this.txt_nombre.getText();
-        String apellido = this.txt_apellido.getText();
-        int altura = Integer.parseInt(this.txt_altura.getText());
-        
-        Persona per = new Persona(nombre,apellido,altura);
-        
-        Modelos.ModGeneral.personas.add(per);
-    }
-    
-    public void fun_imprimir(){
-        System.out.println("qqqqqqqqqqqqqqqqqqqqqq");
-    }
-       
     
      public void cerrarFormulario() {
         try {
-            String formulario = "/Vistas/FXML_Principal.fxml";
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(formulario));
+            String path = "/Vistas/FXML_Principal.fxml";
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
             Parent root = loader.load();
           
 
@@ -85,6 +73,34 @@ public class FXML_PersonaController implements Initializable {
 
     @FXML
     private void acc_cerrar(ActionEvent event) {
-        cerrarFormulario();
+        try {
+            cerrarFormulario();
+        } catch (Exception e) {
+        }
+    }
+
+    @FXML
+    private void acc_guardar(ActionEvent event) {
+            try{
+                this.guardar();
+        
+             }catch(Exception e){
+    
+}
+    
+}
+    public void guardar(){
+        String deporte = this.txt_deporte.getText();
+        
+        Deporte dep = new Deporte(deporte);
+        
+        Persona persona = this.cbx_personas.getSelectionModel().getSelectedItem();
+        
+        persona.setDep(dep);
+        
+    }
+    
+    public void rellenar_combobox(){
+        this.cbx_personas.getItems().addAll(Modelos.ModGeneral.personas);
     }
 }

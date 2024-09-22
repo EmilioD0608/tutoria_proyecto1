@@ -4,6 +4,8 @@
  */
 package Modelos;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author e_d_d
@@ -12,12 +14,24 @@ public class Persona {
     private String nombre;
     private String apellido;
     private int altura;
+    
+    private ArrayList<Deporte> dep = new ArrayList<Deporte>();
 
     public Persona(String nombre, String apellido, int altura) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.altura = altura;
     }
+
+    public ArrayList<Deporte> getDep() {
+        return dep;
+    }
+
+    public void setDep(Deporte deporte) {
+        this.dep.add(deporte);
+    }
+    
+    
 
     public String getNombre() {
         return nombre;
@@ -41,6 +55,11 @@ public class Persona {
 
     public void setAltura(int altura) {
         this.altura = altura;
+    }
+
+    @Override
+    public String toString() {
+        return "nombre=" + nombre + ", apellido=" + apellido + '}';
     }
     
     

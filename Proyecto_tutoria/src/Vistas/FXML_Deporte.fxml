@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="Controlador.FXML_DeporteController">
+   <children>
+      <Button fx:id="btn_cerrar" layoutX="484.0" layoutY="271.0" mnemonicParsing="false" onAction="#acc_cerrar" text="cerrar" />
+      <TextField fx:id="txt_deporte" layoutX="170.0" layoutY="138.0" />
+      <Label layoutX="104.0" layoutY="142.0" text="Deporte" />
+      <Button fx:id="btn_guardar" layoutX="399.0" layoutY="271.0" mnemonicParsing="false" onAction="#acc_guardar" text="guardar" />
+      <ComboBox fx:id="cbx_personas" layoutX="148.0" layoutY="33.0" prefWidth="150.0" />
+      <Label layoutX="84.0" layoutY="37.0" text="Personas" />
+   </children>
+</AnchorPane>
