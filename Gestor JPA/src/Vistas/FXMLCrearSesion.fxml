@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="486.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.FXMLCrearSesionController">
+   <children>
+      <AnchorPane prefHeight="392.0" prefWidth="429.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Pane layoutX="-1.0" layoutY="286.0" prefHeight="106.0" prefWidth="345.0">
+               <children>
+                  <Button fx:id="btn_guardar" layoutX="69.0" layoutY="14.0" mnemonicParsing="false" onAction="#acc_guardar" style="-fx-background-color: #42474d;" text="Guardar" textFill="#ffd966" />
+                  <Button fx:id="btn_cerrar" layoutX="142.0" layoutY="14.0" mnemonicParsing="false" onAction="#acc_cerrar" style="-fx-background-color: #42474d;" text="Cerrar" textFill="#ffe02e" />
+               </children>
+            </Pane>
+            <Label layoutX="68.0" layoutY="23.0" text="CREAR SESIÓN" textFill="#070706">
+               <font>
+                  <Font name="Gill Sans Ultra Bold Condensed" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="68.0" layoutY="96.0" text="Id Sesion" textFill="#615c13">
+               <font>
+                  <Font name="Book Antiqua Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="253.0" layoutY="96.0" text="Id Sitio:" textFill="#615c13">
+               <font>
+                  <Font name="Book Antiqua Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="69.0" layoutY="160.0" text="Usuario: " textFill="#615c13">
+               <font>
+                  <Font name="Book Antiqua Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="id_Se" disable="true" layoutX="68.0" layoutY="119.0" />
+            <TextField fx:id="id_Sit" disable="true" layoutX="253.0" layoutY="119.0" />
+            <TextField fx:id="usu_C" layoutX="68.0" layoutY="184.0" />
+            <ComboBox fx:id="cbx_Se" layoutX="68.0" layoutY="63.0" onAction="#acc_cbxSe" prefWidth="150.0" />
+            <Label layoutX="253.0" layoutY="160.0" text="Contraseña: " textFill="#615c13">
+               <font>
+                  <Font name="Book Antiqua Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="contra_C" layoutX="253.0" layoutY="184.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

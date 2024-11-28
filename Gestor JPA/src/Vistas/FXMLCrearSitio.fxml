@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.FXMLCrearSitioController">
+   <children>
+      <AnchorPane prefHeight="392.0" prefWidth="429.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Pane layoutX="-1.0" layoutY="286.0" prefHeight="106.0" prefWidth="345.0">
+               <children>
+                  <Button fx:id="btn_guardar" layoutX="63.0" layoutY="14.0" mnemonicParsing="false" onAction="#acc_guardar" style="-fx-background-color: #42474d;" text="Guardar" textFill="#ffd966" />
+                  <Button fx:id="btn_cerrar" layoutX="148.0" layoutY="14.0" mnemonicParsing="false" onAction="#acc_cerrar" style="-fx-background-color: #42474d;" text="Cerrar" textFill="#ffe02e" />
+               </children>
+            </Pane>
+            <Label layoutX="62.0" layoutY="14.0" text="CREAR SITIO">
+               <font>
+                  <Font name="Gill Sans Ultra Bold Condensed" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="62.0" layoutY="64.0" text="Nombre: " textFill="#615c13">
+               <font>
+                  <Font name="Book Antiqua Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="254.0" layoutY="64.0" text="Id:" textFill="#615c13">
+               <font>
+                  <Font name="Book Antiqua" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="62.0" layoutY="132.0" text="Url: " textFill="#615c13">
+               <font>
+                  <Font name="Book Antiqua Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nomSit" layoutX="62.0" layoutY="87.0" />
+            <TextField fx:id="id_Sit" layoutX="254.0" layoutY="87.0" />
+            <TextField fx:id="url_Sit" layoutX="62.0" layoutY="158.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
